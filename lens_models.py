@@ -24,7 +24,7 @@ def Singular_Isothermal_Ellipsoid(r_Ein, q_lens, x_arcsec, y_arcsec, x_lens_arcs
 		Translated	A. Enia		Semptember  2015
 	'''
 	import numpy as np
-	import image_tools as ImagTools
+	import .image_tools as ImagTools
 	from astropy import units as u
 
 	if q_lens == 1.0:
@@ -103,7 +103,7 @@ def Single_Power_Law_Ellipsoid(r_Ein, q_lens, slope, x_arcsec, y_arcsec, x_lens_
 		Written		A. Enia		January  2016
 	'''
 	import numpy as np
-	import image_tools as ImagTools
+	import .image_tools as ImagTools
 	from astropy import units as u
 
 	if q_lens == 1.0:
