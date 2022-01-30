@@ -1,5 +1,4 @@
-#!/usr/bin/python
-# -*- coding: latin-1 -*-
+# -*- coding: utf-8 -*-
 
 def bayesian_evidence_uvplane(lg_regterm):
 	"""
