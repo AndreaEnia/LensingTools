@@ -1,5 +1,4 @@
-#!/usr/bin/python
-# -*- coding: latin-1 -*-
+# -*- coding: utf-8 -*-
 
 def array_positions(nx, ny, pixel_scale):
 	import numpy as np
