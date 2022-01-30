@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# -*- coding: latin-1 -*-
-
 def Singular_Isothermal_Ellipsoid(r_Ein, q_lens, x_arcsec, y_arcsec, x_lens_arcsec, y_lens_arcsec, pos_angle, gamma, theta_shear):
 	'''
 	NAME:
