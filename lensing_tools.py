@@ -663,7 +663,7 @@ def SPLE_glafic_twolenses(folder, image_params, output_lens1_params, output_lens
 
 def Gauss2D(x_cen_pixel, y_cen_pixel, sigma_x_pixel, sigma_y_pixel, nx, ny):
     import numpy as np
-    import _additional_scripts.image_tools as ImagTools
+    import image_tools as ImagTools
 #   array of pixel positions:
     pixel_x, pixel_y = np.zeros(shape=(nx,ny)), np.zeros(shape=(nx,ny))
     index_x, index_y= np.arange(nx), np.arange(ny)
