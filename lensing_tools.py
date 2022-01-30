@@ -663,7 +663,6 @@ def SPLE_glafic_twolenses(folder, image_params, output_lens1_params, output_lens
 
 def Gauss2D(x_cen_pixel, y_cen_pixel, sigma_x_pixel, sigma_y_pixel, nx, ny):
     import numpy as np
-    import image_tools as ImagTools
 #   array of pixel positions:
     pixel_x, pixel_y = np.zeros(shape=(nx,ny)), np.zeros(shape=(nx,ny))
     index_x, index_y= np.arange(nx), np.arange(ny)
@@ -674,9 +673,9 @@ def Gauss2D(x_cen_pixel, y_cen_pixel, sigma_x_pixel, sigma_y_pixel, nx, ny):
     return Gauss2D
 
 def simulate_source(FWHM_x_arcsec, FWHM_y_arcsec, FWHM_dx_cen, FWHM_dy_cen, nx_SP, ny_SP, pixel_scale_SP):
-	import numpy as np
-	x_cen_arcsec, y_cen_arcsec = nx_SP*pixel_scale_SP/2.0, ny_SP*pixel_scale_SP/2.0
-	FWHM_x_cen, FWHM_y_cen = (x_cen_arcsec + FWHM_dx_cen)/pixel_scale_SP, (y_cen_arcsec + FWHM_dy_cen)/pixel_scale_SP
-	FWHM_x_pixel, FWHM_y_pixel = FWHM_x_arcsec/pixel_scale_SP, FWHM_y_arcsec/pixel_scale_SP
-	sigma_x_pixel, sigma_y_pixel = FWHM_x_pixel/(2.0*np.sqrt(2.0*np.log(2.0))), FWHM_y_pixel/(2.0*np.sqrt(2.0*np.log(2.0)))
-	return Gauss2D(FWHM_y_cen, FWHM_x_cen, sigma_y_pixel, sigma_x_pixel, nx_SP, ny_SP)
+    import numpy as np
+    x_cen_arcsec, y_cen_arcsec = nx_SP*pixel_scale_SP/2.0, ny_SP*pixel_scale_SP/2.0
+    FWHM_x_cen, FWHM_y_cen = (x_cen_arcsec + FWHM_dx_cen)/pixel_scale_SP, (y_cen_arcsec + FWHM_dy_cen)/pixel_scale_SP
+    FWHM_x_pixel, FWHM_y_pixel = FWHM_x_arcsec/pixel_scale_SP, FWHM_y_arcsec/pixel_scale_SP
+    sigma_x_pixel, sigma_y_pixel = FWHM_x_pixel/(2.0*np.sqrt(2.0*np.log(2.0))), FWHM_y_pixel/(2.0*np.sqrt(2.0*np.log(2.0)))
+    return Gauss2D(FWHM_y_cen, FWHM_x_cen, sigma_y_pixel, sigma_x_pixel, nx_SP, ny_SP)
