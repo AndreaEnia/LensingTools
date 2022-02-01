@@ -1,2 +1,2 @@
 # LensingTools
-Tools for my personal lens modelling packages
+Various tools for my own lens modelling software
